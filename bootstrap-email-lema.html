@@ -8,16 +8,64 @@
     <link rel="stylesheet" href="bootstrap-email-lema.css">
 </head>
 <body>
-    <div class="container-fluid text-center green-border max-height">
+    <div class="container-fluid green-border max-height">
         <div class="row">
-            <div class=" d-none d-md-block col-md-2 h-50 blue-border">
+            <div class = "d-none d-md-block col-md-2 h-50 blue-border">
                 Hello
             </div>
+            <div class="d-md-none gray-border">Hello again!</div>
             <div class="col-sm-12 col-md-5 h-75 red-border">
-                Goodbye
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Subject</h5>
+                        <p class="card-text">Email Text</p>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Subject</h5>
+                        <p class="card-text">Email Text</p>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Subject</h5>
+                        <p class="card-text">Email Text</p>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-12 col-md-5 h-75 orange-border">
-                Who are you?
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Subject: </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam reiciendis sequi voluptates, beatae tenetur rem fugit reprehenderit dicta aspernatur amet quos, iusto consequuntur. A consequatur omnis illum. Repudiandae, harum architecto!</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#replyModal">Reply</button>
+                        <div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="replyModalLabel">Reply</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                              <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                              <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="mb-3">
+                                              <label for="message-text" class="col-form-label">Message:</label>
+                                              <textarea class="form-control" id="message-text"></textarea>
+                                            </div>
+                                          </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
