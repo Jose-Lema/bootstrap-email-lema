@@ -20,8 +20,13 @@
 
 body {
     height: 100vh;
+    background-color: rgb(147, 161, 157)
 }
 
 .max-height {
     height: 100%;
 }
+
+/*#bar {
+    background-color: rgb(232, 161, 184)
+}*/
