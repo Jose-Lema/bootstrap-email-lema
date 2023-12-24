@@ -10,34 +10,96 @@
 <body>
     <div class="container-fluid green-border max-height">
         <div class="row">
-            <div class = "d-none d-md-block col-md-2 h-50 blue-border">
-                Hello
+
+            <!--Navigation Menu-->
+
+            <div class="gray-border d-lg-none">
+                <nav class="navbar navbar-expand-md bg-body-tertiary ">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">Inbox</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Outbox</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Sent Mail</a>
+                          </li>
+                          <li class="nav-item">
+                            <button class="btn btn-outline-danger">Spam</button>
+                          </li>
+                          <li class="nav-item pt-sm-2 pt-md-0 ps-md-2">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#replyModal">Reply</button>
+                          </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                      </div>
+                    </div>
+                  </nav>
             </div>
-            <div class="d-md-none gray-border">Hello again!</div>
-            <div class="col-sm-12 col-md-5 h-75 red-border">
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Subject</h5>
-                        <p class="card-text">Email Text</p>
-                    </div>
-                </div>
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Subject</h5>
-                        <p class="card-text">Email Text</p>
-                    </div>
-                </div>
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Subject</h5>
-                        <p class="card-text">Email Text</p>
+
+            <div class="d-none d-lg-block col-lg-2 text-center blue-border">
+                <a href="#" target="_blank">Inbox</a> <hr>
+                <a href="#" target="_blank">Outbox</a> <hr>
+                <a href="#" target="_blank">Sent Mail</a> <hr>
+                <button class="btn btn-outline-danger">Spam</button> <hr>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#replyModal">Reply</button>
+
+            </div>
+
+            <!--Stacked Inbox-->
+            <div class="col-sm-12 col-md-6 col-lg-5 h-75 red-border">
+                <div class="accordion" id="inbox-stack">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#inboxOne" aria-expanded="true" aria-controls="inboxOne">
+                            Subject: Your car's warranty has expired!
+                            </button>
+                        </h2>
+                        <div id="inboxOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, nostrum! Sapiente tenetur quo accusantium voluptates, non hic repellendus ipsam. Quisquam aut facere, architecto sapiente expedita totam quaerat temporibus possimus assumenda?
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#inboxTwo" aria-expanded="false" aria-controls="inboxTwo">
+                                Subject: I cannot believe it's not butter!
+                            </button>
+                        </h2>
+                        <div id="inboxTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias maiores aperiam, veniam velit dolor eaque est dolorum aut odio iure saepe minus ipsam beatae dolorem, hic eos suscipit perspiciatis sequi.
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#inboxThree" aria-expanded="false" aria-controls="inboxThree">
+                                Subject: I'm a Nigerian prince and I need help 
+                            </button>
+                        </h2>
+                        <div id="inboxThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                            General
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-5 h-75 orange-border">
+            <!--Opened Email Section-->
+
+            <div class="col-sm-12 col-md-6 col-lg-5 h-75 orange-border">
                 <div class="card mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">Subject: </h5>
+                        <h5 class="card-title">Subject: Your car's warranty has expired!</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam reiciendis sequi voluptates, beatae tenetur rem fugit reprehenderit dicta aspernatur amet quos, iusto consequuntur. A consequatur omnis illum. Repudiandae, harum architecto!</p>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#replyModal">Reply</button>
                         <div class="modal fade" id="replyModal" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
@@ -66,6 +128,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
